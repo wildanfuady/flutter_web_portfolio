@@ -1,11 +1,13 @@
 import 'package:flutter_web/config/assets.dart';
 import 'package:flutter_web/config/constants.dart';
 import 'package:flutter/material.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
 import '../widgets/theme_inherited_widget.dart';
 
 class AboutTab extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -42,69 +44,73 @@ class AboutTab extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  FlatButton.icon(
-                    icon: SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: Image.asset(Assets.github)),
-                    label: Text('Github'),
-                    onPressed: () => html.window
-                        .open(Constants.PROFILE_GITHUB, 'wildanfuady'),
-                  ),
-                  FlatButton.icon(
-                    icon: SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: Image.asset(Assets.twitter)),
-                    label: Text('Twitter'),
-                    onPressed: () => html.window
-                        .open(Constants.PROFILE_TWITTER, 'wildanfuady'),
-                  ),
-                  FlatButton.icon(
-                    icon: SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: Image.asset(
-                            ThemeSwitcher.of(context).isDarkModeOn
-                                ? Assets.medium
-                                : Assets.medium_light)),
-                    label: Text('Medium'),
-                    onPressed: () => html.window
-                        .open(Constants.PROFILE_MEDIUM, 'wildanfuady'),
-                  )
+                  TextButton.icon(
+  icon: SizedBox(
+    width: 20,
+    height: 20,
+    child: Image.asset(Assets.github),
+  ),
+  label: Text('Github'),
+  onPressed: () => html.window.open(Constants.PROFILE_GITHUB, 'wildanfuady'),
+),
+TextButton.icon(
+  icon: SizedBox(
+    width: 20,
+    height: 20,
+    child: Image.asset(Assets.twitter),
+  ),
+  label: Text('Twitter'),
+  onPressed: () => html.window.open(Constants.PROFILE_TWITTER, 'wildanfuady'),
+),
+TextButton.icon(
+  icon: SizedBox(
+    width: 20,
+    height: 20,
+    child: Image.asset(
+      ThemeSwitcher.of(context).isDarkModeOn ? Assets.medium : Assets.medium_light,
+    ),
+  ),
+  label: Text('Medium'),
+  onPressed: () => html.window.open(Constants.PROFILE_MEDIUM, 'wildanfuady'),
+),
+
+
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  FlatButton.icon(
-                    icon: SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: Image.asset(Assets.instagram)),
-                    label: Text('Instagram'),
-                    onPressed: () => html.window
-                        .open(Constants.PROFILE_INSTAGRAM, 'wildanfuady'),
-                  ),
-                  FlatButton.icon(
-                    icon: SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: Image.asset(Assets.facebook)),
-                    label: Text('Facebook'),
-                    onPressed: () => html.window
-                        .open(Constants.PROFILE_FACEBOOK, 'wildanfuady'),
-                  ),
-                  FlatButton.icon(
-                    icon: SizedBox(
-                        width: 20,
-                        height: 20,
-                        child: Image.asset(Assets.linkedin)),
-                    label: Text('Linkedin'),
-                    onPressed: () => html.window
-                        .open(Constants.PROFILE_LINKEDIN, 'wildanfuady'),
-                  )
+                 TextButton.icon(
+  icon: SizedBox(
+    width: 20,
+    height: 20,
+    child: Image.asset(Assets.github),
+  ),
+  label: Text('Github'),
+  onPressed: () => html.window.open(Constants.PROFILE_GITHUB, 'wildanfuady'),
+),
+TextButton.icon(
+  icon: SizedBox(
+    width: 20,
+    height: 20,
+    child: Image.asset(Assets.twitter),
+  ),
+  label: Text('Twitter'),
+  onPressed: () => html.window.open(Constants.PROFILE_TWITTER, 'wildanfuady'),
+),
+TextButton.icon(
+  icon: SizedBox(
+    width: 20,
+    height: 20,
+    child: Image.asset(
+      ThemeSwitcher.of(context).isDarkModeOn ? Assets.medium : Assets.medium_light,
+    ),
+  ),
+  label: Text('Medium'),
+  onPressed: () => html.window.open(Constants.PROFILE_MEDIUM, 'wildanfuady'),
+),
+
                 ],
               )
             ],
